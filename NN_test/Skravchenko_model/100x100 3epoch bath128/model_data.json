@@ -1,0 +1,60 @@
+{
+  "dataset": "cifar10",
+  "model_name": "ResNet50",
+  "resize": "32x32x3 to 100x100x3",
+  "trainable_model_layers": "5",
+  "additional_layers": [
+    "Flatten",
+    "Dense(512, activation=\"relu\")",
+    "BatchNormalization()",
+    "Dropout(0.2)",
+    "Dense(num_classes, activation=\"softmax\")"
+  ],
+  "num_classes": 10,
+  "epochs": 5,
+  "batch_size": 128,
+  "optimizer": "<class 'keras.optimizers.optimizer_v2.adam.Adam'>",
+  "learning_rate": 0.0001,
+  "loss": "categorical_crossentropy",
+  "metrics": [
+    "accuracy"
+  ],
+  "hystory": {
+    "loss": [
+      0.7246792316436768,
+      0.5287890434265137,
+      0.4725269675254822,
+      0.44237929582595825,
+      0.4186478555202484
+    ],
+    "accuracy": [
+      0.7622600197792053,
+      0.817799985408783,
+      0.8358799815177917,
+      0.8465399742126465,
+      0.8515400290489197
+    ],
+    "val_loss": [
+      0.4179902970790863,
+      0.38778287172317505,
+      0.3779129087924957,
+      0.3543819487094879,
+      0.33420291543006897
+    ],
+    "val_accuracy": [
+      0.8633000254631042,
+      0.8669000267982483,
+      0.8744999766349792,
+      0.8784000277519226,
+      0.8880000114440918
+    ]
+  },
+  "model_test_acc": [
+    0.3342028260231018,
+    0.8880000114440918
+  ],
+  "model_train_acc": [
+    0.23224908113479614,
+    0.9193400144577026
+  ]
+}
