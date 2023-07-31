@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "webapp-ml"
+version = "0.1.0"
+description = ""
+authors = ["Serhii-Kravchenko-2022 <skravchenko20@gmail.com>"]
+readme = "README.md"
+packages = [{include = "webapp_ml"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+streamlit = "^1.25.0"
+#scikit-learn = "^1.3.0"
+#keras = "^2.13.1"
+#matplotlib = "^3.7.2"
+openai = "^0.27.8"
+
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
