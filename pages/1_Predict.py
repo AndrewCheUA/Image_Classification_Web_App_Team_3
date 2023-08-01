@@ -1,27 +1,11 @@
 import streamlit as st
 import tensorflow as tf
 from tensorflow.keras.models import load_model
-from function.function import get_image_dimensions, is_image
+from function.function import get_image_dimensions, is_image, preprocess_image
 from PIL import Image
 import numpy as np
 
-
-
 st.set_page_config(page_title="Web_App_Team_3", page_icon="👨‍🎓", layout="wide")
-
-
-# Define a function to preprocess the uploaded image
-def preprocess_image(image):
-    test_image = Image.open(image)
-    target_size = (32, 32)
-    test_image = test_image.resize(target_size)
-
-    image_array = np.array(test_image)
-
-    image_array = image_array / 255.0
-
-    input_image = np.expand_dims(image_array, axis=0)
-    return input_image
 
 st.title(':red[Download picture/Завантажте картинку]', help='help')
 image = st.file_uploader("", help='help')
