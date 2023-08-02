@@ -1,11 +1,23 @@
 import streamlit as st
 import openai as openai
 
-st.set_page_config(page_title="Web_App_Team_3", page_icon="👨‍🎓", layout="wide")
+from function.sidebar import sidebar
+
+st.set_page_config(page_title="Web_App_Team_3", page_icon="🤖", layout="wide")
 
 st.title("ChatGPT-clone")
 
 openai.api_key = st.secrets["OPEN_API_KEY"]
+
+api_key = sidebar()
+
+if not api_key:
+    st.error(
+        "⚠️ You haven't provided an API key. Please enter your API key in the sidebar.\n"
+        "You can get an API key from [OpenAI](https://platform.openai.com/account/api-keys)."
+    )
+else:
+    openai.api_key = api_key
 
 if "openai_model" not in st.session_state:
     st.session_state["openai_model"] = "gpt-3.5-turbo"
