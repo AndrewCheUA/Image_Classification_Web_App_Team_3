@@ -63,7 +63,4 @@ This project is used by:
 #
 # Glory to Ukraine !
 
-## Screenshots
-
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
 
