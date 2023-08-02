@@ -1,0 +1,19 @@
+[[pages]]
+path = "WebML-app.py"
+name = "Home"
+icon = "🏠"
+
+[[pages]]
+path = "pages/1_Predict.py"
+name = "Predict"
+icon = " 🔮"
+
+[[pages]]
+path = "pages/2_Model-data.py"
+name = "Model-data"
+icon = "📊"
+
+[[pages]]
+path = "pages/GPT Clone.py"
+name = "GPT Clone"
+icon = "💬"
