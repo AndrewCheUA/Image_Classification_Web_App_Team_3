@@ -33,13 +33,15 @@ def preprocess_image(image):
     """
     The preprocess_image function takes an image file path as input and returns a processed version of the image.
     The processing steps are:
-        1. Resize the image to 32x32 pixels (the size required by our model)
-        2. Normalize the pixel values in each channel of the resized image to be between 0 and 1
+        1. Open the image using PIL
+        2. Convert the image to RGB mode (to ensure 3 color channels)
+        3. Resize the image to 32x32 pixels (the size required by our model)
+        4. Normalize the pixel values in each channel of the resized image to be between 0 and 1
 
     :param image: Pass the image to be preprocessed
     :return: A numpy array of shape (32, 32, 3)
     """
-    test_image = Image.open(image)
+    test_image = Image.open(image).convert("RGB")  # Convert the image to RGB mode
     target_size = (32, 32)
     test_image = test_image.resize(target_size)
 
