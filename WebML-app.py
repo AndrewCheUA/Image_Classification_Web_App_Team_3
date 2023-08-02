@@ -6,11 +6,12 @@ import streamlit as st
 
 # is equivalent to in enviro:
 # streamlit run WebML-app.py
-st.set_page_config(page_title="Web_App_Team_3", page_icon="👨‍🎓", layout="wide")
+
+st.set_page_config(page_title="Web_App_Team_3", page_icon="🏠🎓", layout="wide")
 
 # st.markdown('<style>h1{color: green;}</style>', unsafe_allow_html=True)
 _, col, _ = st.columns([1,6,1])
-col.title('*GoIt*: **group** *"Python 8"* **block** *"Data Science"*')
+col.title('*GoIT*: **group** *"Python 8"* **block** *"Data Science"*')
 st.divider()
 _, col, _ = st.columns([1,3,1])
 col.title('**Image Classification Web App** Team-3')
