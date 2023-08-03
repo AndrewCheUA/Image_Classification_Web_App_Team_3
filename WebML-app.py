@@ -2,7 +2,7 @@ import streamlit as st
 
 # To run APP
 # Running
-#python -m streamlit run WebML-app.py
+# python -m streamlit run WebML-app.py
 
 # is equivalent to in enviro:
 # streamlit run WebML-app.py
@@ -10,17 +10,17 @@ import streamlit as st
 st.set_page_config(page_title="Web_App_Team_3", page_icon="🏠🎓", layout="wide")
 
 # st.markdown('<style>h1{color: green;}</style>', unsafe_allow_html=True)
-_, col, _ = st.columns([1,6,1])
+_, col, _ = st.columns([1, 6, 1])
 col.title('*GoIT*: **group** *"Python 8"* **block** *"Data Science"*')
 st.divider()
-_, col, _ = st.columns([1,3,1])
+_, col, _ = st.columns([1, 3, 1])
 col.title('**Image Classification Web App** Team-3')
 st.divider()
 col1, col2, col3, col4, col5, col6, col7 = st.columns(7)
 with col2:
     st.title('Our team')
 with col3:
-    st.header("Andriy")
+    st.header("Andrii")
     st.image('pictures/boy.jpg', use_column_width=True)
 
 with col4:
@@ -36,5 +36,5 @@ with col6:
     st.image('pictures/girl.jpg', use_column_width=True)
 st.divider()
 st.write("""
-### *App predicts the class of image, classification is based on the prediction of a trained convolutional neural network used pre-trained model "DenseNet121".*
+### *App predicts the class of image, classification is based on the prediction of a convolutional neural network (CNN) using TensorFlow's Keras API. The model is designed for image classification on a dataset with 10 classes: 'airplane', 'automobile', 'bird', 'cat', 'deer', 'dog', 'frog', 'horse', 'ship', 'truck'.*
 """, unsafe_allow_html=True)
