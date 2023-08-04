@@ -100,10 +100,10 @@ After achieving 87% accuracy on the testing data initially, we were relieved thi
 Yot can download our web app docker container and use it:
 
 ```bash
-  docker pull andriiche/ml_team3_test:latest
+  docker pull andriiche/web_ml_team3_test3:latest
 ```
 ```bash
-  docker run -it -d -p 80:80 ml_team3_test:latest
+  docker run -it -d -p 80:80 web_ml_team3_test3:latest
 ```
 
 ## 🤝 Used By
