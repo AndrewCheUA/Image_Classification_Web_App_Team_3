@@ -1,30 +1,22 @@
 import pandas as pd
 import streamlit as st
-# import json
 from matplotlib import pyplot as plt
 
 st.set_page_config(page_title="Model-data", page_icon="📊", layout="wide")
-
-# st.header('**Model data**')
-# st.subheader('Training and validation accuracy')
-# st.image('model-data/DenseNet_model_accuracy.png')
-# st.subheader('Training and validation loss')
-# st.image('model-data/DenseNet_model_loss.png')
-
-# # Загрузка данных из JSON файла
-# with open('model-data/model_data.json', 'r') as f:
-#     data = json.load(f)
-#
-# # Отображение данных в виде таблицы
-# st.title('Model hiperparameters and accuracy')
-# st.table(data)
 
 st.header('**:blue[Model data: ]**')
 
 data = pd.read_csv('model-data/history_updated.csv')
 
+st.write("The plot below shows the training and validation loss over epochs:")
+st.write("- Test loss: 0.36%")
+st.write("- Test accuracy: 0.90%")
+st.write("- Train loss: 0.04%")
+st.write("- Train accuracy: 0.99%")
+
 # Set up the plot 1
-st.subheader('Training and Validation Accuracy')
+centered_header = "<h1 style='text-align: center; font-size: 24px;'>Training and Validation Accuracy</h1>"
+st.write(centered_header, unsafe_allow_html=True)
 
 fig, ax = plt.subplots(figsize=(10, 6))
 ax.plot(data['accuracy'], label='Training Accuracy', color='blue', linestyle='-')
@@ -38,7 +30,8 @@ plt.xticks(rotation=45)
 st.pyplot(fig)
 
 # Set up the plot 2
-st.subheader('Training and Validation Loss')
+centered_header = "<h1 style='text-align: center; font-size: 24px;'>Training and Validation Loss</h1>"
+st.write(centered_header, unsafe_allow_html=True)
 
 fig, ax = plt.subplots(figsize=(10, 6))
 ax.plot(data['loss'], label='Training Loss', color='blue', linestyle='-')
